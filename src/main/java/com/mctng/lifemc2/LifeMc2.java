@@ -7,6 +7,7 @@ import com.mctng.lifemc2.config.ConfigWrapper;
 import com.mctng.lifemc2.datahandler.DataHandler;
 import com.mctng.lifemc2.listeners.InteractListener;
 import com.mctng.lifemc2.listeners.LoginListener;
+import com.mctng.lifemc2.listeners.PlayerDeathListener;
 import com.mctng.lifemc2.listeners.PlayerRespawnListener;
 import com.mctng.lifemc2.vault.VaultHandler;
 
@@ -73,7 +74,11 @@ public class LifeMc2 extends JavaPlugin {
 				new PlayerRespawnListener(this), this);
 		getServer().getPluginManager().registerEvents(new LoginListener(this),
 				this);
-	}
+		if (this.configHandler.gainLifeAtMurder()) {
+			getServer().getPluginManager().registerEvents(new PlayerDeathListener(this),
+					this);
+		}
+}
 
 	public ConfigHandler getConfigHandler() {
 		return configHandler;
