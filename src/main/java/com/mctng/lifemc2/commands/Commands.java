@@ -145,7 +145,7 @@ public class Commands implements CommandExecutor {
 					return true;
 				}
 
-				if (newLives > plugin.getConfigHandler().getMaxLives()) {
+				if (newLives > plugin.getConfigHandler().getMaxLives(target)) {
 					sender.sendMessage(Lang.CANNOT_GIVE_THAT_MANY_LIVES
 							.getConfigValue());
 					return true;
@@ -207,9 +207,9 @@ public class Commands implements CommandExecutor {
 
 			int lives = plugin.getDataHandler().getLives(player);
 
-			if (lives + amount > plugin.getConfigHandler().getMaxLives()) {
+			if (lives + amount > plugin.getConfigHandler().getMaxLives(player.getName())) {
 				player.sendMessage(Lang.CANNOT_HAVE_MORE_THAN
-						.getConfigValue(plugin.getConfigHandler().getMaxLives()
+						.getConfigValue(plugin.getConfigHandler().getMaxLives(player.getName())
 								+ ""));
 				return true;
 			}

@@ -26,6 +26,7 @@ public class LoginListener implements Listener {
 		System.out.println(player.getEffectivePermissions());
 		int lives;
 
+		System.out.println(plugin.getConfigHandler().getMaxLives(player.getName()));
 
 
 		if (!plugin.getDataHandler().isStored(player.getName())) {

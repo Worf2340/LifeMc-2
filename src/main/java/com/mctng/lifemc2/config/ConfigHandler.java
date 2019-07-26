@@ -5,9 +5,13 @@ import com.mctng.lifemc2.fileutil.FileUtil;
 import com.mctng.lifemc2.lang.Lang;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.permissions.PermissionAttachmentInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Date created: 22:05:12
@@ -74,6 +78,39 @@ public class ConfigHandler {
 		return realMaterials;
 	}
 	
+	public int getMaxLives(String name) {
+		//UUID uuid = UUID.fromString(uuidString);
+		if (plugin.getServer().getPlayerExact(name) != null){
+			Player player = plugin.getServer().getPlayerExact(name);
+
+			Pattern p = Pattern.compile("lifemc.lives.max.([^.]+$)");
+			Matcher m;
+			int lives = 0;
+
+			for (PermissionAttachmentInfo permission : player.getEffectivePermissions()){
+				m = p.matcher(permission.getPermission());
+				if (m.matches()){
+					if (m.group(1).matches("\\d+")) {
+						if (Integer.parseInt(m.group(1)) > lives) {
+							lives = Integer.parseInt(m.group(1));
+						}
+					}
+				}
+			}
+
+			if (lives == 0) {
+				return mainConfig.getInt("Max lives", 10);
+			}
+			else {
+				return lives;
+			}
+		}
+		else {
+			return plugin.getDataHandler().getMaxLives(name);
+		}
+
+	}
+
 	public int getMaxLives() {
 		return mainConfig.getInt("Max lives", 10);
 	}

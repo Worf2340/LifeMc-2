@@ -42,7 +42,7 @@ public class InteractListener implements Listener {
 		
 		int lives = plugin.getDataHandler().getLives(player);
 		
-		if (lives >= plugin.getConfigHandler().getMaxLives()) {
+		if (lives >= plugin.getConfigHandler().getMaxLives(player.getName())) {
 			player.sendMessage(Lang.CANNOT_OBTAIN_MORE_LIVES.getConfigValue());
 			return;
 		}

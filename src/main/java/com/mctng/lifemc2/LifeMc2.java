@@ -5,10 +5,7 @@ import com.mctng.lifemc2.commands.Commands;
 import com.mctng.lifemc2.config.ConfigHandler;
 import com.mctng.lifemc2.config.ConfigWrapper;
 import com.mctng.lifemc2.datahandler.DataHandler;
-import com.mctng.lifemc2.listeners.InteractListener;
-import com.mctng.lifemc2.listeners.LoginListener;
-import com.mctng.lifemc2.listeners.PlayerDeathListener;
-import com.mctng.lifemc2.listeners.PlayerRespawnListener;
+import com.mctng.lifemc2.listeners.*;
 import com.mctng.lifemc2.vault.VaultHandler;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -73,6 +70,8 @@ public class LifeMc2 extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(
 				new PlayerRespawnListener(this), this);
 		getServer().getPluginManager().registerEvents(new LoginListener(this),
+				this);
+		getServer().getPluginManager().registerEvents(new PlayerQuitListener(this),
 				this);
 		if (this.configHandler.gainLifeAtMurder()) {
 			getServer().getPluginManager().registerEvents(new PlayerDeathListener(this),
