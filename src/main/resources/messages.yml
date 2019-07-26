@@ -1,0 +1,26 @@
+# You can edit all messages to your liking. 
+# Colour codes are supported.
+player-not-online: '&4{0} is not online.'
+player-only-command: '&4Only players can use that command.'
+player-not-found-in-database: '&4{0} has not been found in the database.'
+no-permission: '&4You don''t have the sufficient permissions to do this.'
+format-error: '&4Incorrect format. Correct format: &e{0}'
+usage-error: '&4Incorrect usage. Correct usage: &e{0}'
+unknown-command: '&4Unknown command. Type &e/lifemc help&4 for a list of commands.'
+kick-out-of-lives: '&4You ran out of lives. Ask a friend to give you a life to get
+  you back online.'
+lost-a-life: '&4You lost &e1&4 life!'
+cannot-obtain-more-lives: '&4You cannot gain any more lives!'
+gained-a-life: '&2You gained &e1&2 life!'
+buying-not-enabled: '&4You cannot buy lives on this server!'
+insufficient-funds: '&4You do not have enough money! You need at least &e{0}&4.'
+cannot-have-more-than: '&4You cannot have more than &e{0}&4 lives.'
+bought-new-lives: '&2You bought &e{0}&2 new lives for &6{1}&2.'
+cost-of-a-life: '&2A life costs &6{0}&2.'
+changed-life-amount: '&2You changed &e{0}&2 lives to &e{1}&2.'
+insufficient-lives: '&4You do not have enough lives to do that!'
+cannot-give-that-many-lives: '&4You cannot give that many lives. It would exceed the
+  limit!'
+check-lives-self: '&2You have &e{0}&2 lives.'
+check-lives-other: '&2{0} has &e{1}&2 lives.'
+cannot-give-self: '&4You cannot give yourself lives.'
