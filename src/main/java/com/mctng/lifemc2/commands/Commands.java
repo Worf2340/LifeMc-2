@@ -52,7 +52,8 @@ public class Commands implements CommandExecutor {
 				showHelpPages(sender, page);
 			}
 			return true;
-		} else if (action.equalsIgnoreCase("set")
+		}
+		else if (action.equalsIgnoreCase("set")
 				|| action.equalsIgnoreCase("add")
 				|| action.equalsIgnoreCase("remove")
 				|| action.equalsIgnoreCase("give")) {
@@ -117,7 +118,7 @@ public class Commands implements CommandExecutor {
 			target = plugin.getDataHandler().getPlayerName(
 					plugin.getDataHandler().getUUIDString(target));
 
-			int currentLives = plugin.getDataHandler().getLives(target);
+			int currentLives = plugin.getDataHandler().getLives(target, false);
 
 			if (action.equalsIgnoreCase("add")) {
 				newLives = currentLives + livesArg;
@@ -155,7 +156,7 @@ public class Commands implements CommandExecutor {
 				plugin.getDataHandler().setLives(player, ownLives - livesArg);
 			}
 
-			plugin.getDataHandler().setLives(target, newLives);
+			plugin.getDataHandler().setLives(target, newLives, false);
 
 			sender.sendMessage(Lang.CHANGED_LIFE_AMOUNT.getConfigValue(target
 					+ "'s", newLives + ""));
@@ -304,7 +305,7 @@ public class Commands implements CommandExecutor {
 					return true;
 				}
 
-				int lives = plugin.getDataHandler().getLives(realTarget);
+				int lives = plugin.getDataHandler().getLives(realTarget, false);
 
 				sender.sendMessage(Lang.CHECK_LIVES_OTHER.getConfigValue(
 						realTarget, lives + ""));
@@ -316,6 +317,16 @@ public class Commands implements CommandExecutor {
 						.getConfigValue("/lifemc check (player)"));
 				return true;
 			}
+		}
+		else if (action.equalsIgnoreCase("reset")) {
+
+			if (!(this.hasPermission(sender,"lifemc.reset"))){
+				return true;
+			}
+
+			plugin.getDataHandler().resetPlayers();
+			sender.sendMessage(ChatColor.GOLD + "Reset complete!");
+			return true;
 		}
 
 		sender.sendMessage(Lang.UNKNOWN_COMMAND.getConfigValue());
@@ -346,6 +357,8 @@ public class Commands implements CommandExecutor {
 					+ ChatColor.BLUE + " --- Buy a certain amount of lives.");
 			sender.sendMessage(ChatColor.GOLD + "/lifemc cost" + ChatColor.BLUE
 					+ " --- Check the cost to buy one life.");
+			sender.sendMessage(ChatColor.GOLD + "/lifemc reset" + ChatColor.BLUE
+					+ " --- Resets every player's starting life to 3, if their current lives are below 3.");
 			sender.sendMessage(ChatColor.GRAY + "Page 2 of " + maxpages);
 		} else {
 			sender.sendMessage(ChatColor.BLUE + "----------------["

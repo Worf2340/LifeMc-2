@@ -41,3 +41,13 @@ permissions:
   lifemc.lives.lose:
     description: Can lose a life on death.
     default: true
+  lifemc.lives.starting.x:
+    description: Changes starting lives to x lives.
+    default: false
+  lifemc.lives.max.x:
+    description: Changes maximum lives to x lives.
+    default: false
+  lifemc.reset:
+    description: Resets all lives.
+    default: op
+

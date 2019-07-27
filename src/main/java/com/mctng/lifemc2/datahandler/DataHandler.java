@@ -36,10 +36,16 @@ public class DataHandler {
 		return dataConfig.getInt(accountHolder + "." + uuid.toString() + ".lives", 0);
 	}
 	
-	public int getLives(String playerName) {
-		String uuid = getUUIDString(playerName);
-		
-		if (uuid == null) return 0;
+	public int getLives(String playerName, boolean isUuid) {
+
+		String uuid;
+		if (!(isUuid)) {
+			uuid = getUUIDString(playerName);
+			if (uuid == null) return 0;
+		}
+		else {
+			uuid = playerName;
+		}
 		
 		return dataConfig.getInt(accountHolder + "." + uuid + ".lives", 0);
 	}
@@ -55,11 +61,17 @@ public class DataHandler {
 	}
 
 	
-	public void setLives(String playerName, int lives) {
-		 String uuid = getUUIDString(playerName);
-		
-		if (uuid == null) return;
-		
+	public void setLives(String playerName, int lives, boolean isUuid) {
+		String uuid;
+		if (!(isUuid)) {
+			uuid = getUUIDString(playerName);
+			if (uuid == null) return;
+		}
+		else {
+			uuid = playerName;
+		}
+
+
 		dataConfig.set(accountHolder + "." + uuid + ".lives", lives);
 
 		// Save
@@ -104,7 +116,15 @@ public class DataHandler {
 		
 		return null;
 	}
-	
+
+	public void resetPlayers () {
+		for (String name : dataConfig.getConfigurationSection("accounts").getKeys(false)) {
+			System.out.println(this.getLives(name, true));
+			if (this.getLives(name, true) < 3) {
+				this.setLives(name, 3, true);
+			}
+		}
+	}
 	public boolean isStored(String playerName) {
 		return getUUIDString(playerName) != null;
 	}

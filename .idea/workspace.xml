@@ -7,15 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1505d07-4222-425d-9205-63474d302a16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/InteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/InteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/LifeMc2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/commands/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/commands/Commands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/config/ConfigHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/config/ConfigHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/InteractListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/InteractListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/datahandler/DataHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/datahandler/DataHandler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,15 +33,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -63,15 +50,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+              <folding>
+                <element signature="e#2470#2471#0" expanded="true" />
+                <element signature="e#3215#3216#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="119">
               <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#534#565#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#623#1071#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -107,15 +129,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.14.1-R0.1-SNAPSHOT/spigot-api-1.14.1-R0.1-20190527.022734-35-sources.jar!/org/bukkit/command/PluginCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
@@ -126,18 +139,6 @@
                 <element signature="e#2202#2203#0" expanded="true" />
                 <element signature="e#2373#2374#0" expanded="true" />
                 <element signature="e#2398#2399#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="26" column="97" lean-forward="true" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,6 +173,9 @@
       <find>murder</find>
       <find>vi</find>
       <find>give</find>
+      <find>unk</find>
+      <find>reset</find>
+      <find>permissio</find>
     </findStrings>
     <replaceStrings>
       <replace>com.mctng.lifemc2</replace>
@@ -186,21 +190,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/api/API.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigWrapper.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerRespawnListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerDeathListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/InteractListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" />
       </list>
     </option>
   </component>
@@ -472,7 +476,7 @@
       <updated>1564032018657</updated>
       <workItem from="1564032022036" duration="11662000" />
       <workItem from="1564156808136" duration="17927000" />
-      <workItem from="1564187573081" duration="7925000" />
+      <workItem from="1564187573081" duration="10740000" />
     </task>
     <task id="LOCAL-00001" summary="Added permission for different amount of starting lives.">
       <created>1564117761664</created>
@@ -502,11 +506,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564197246157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix eating golden apples.">
+      <created>1564204855326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564204855326</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39737000" />
+    <option name="totallyTimeSpent" value="42552000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,7 +542,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.604698" visible="true" weight="0.33994335" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.604698" weight="0.33994335" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -540,7 +551,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.39530203" side_tool="true" weight="0.33994335" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" visible="true" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -563,7 +574,8 @@
     <MESSAGE value="Add gain life on murder" />
     <MESSAGE value="Add permission for changing max lives" />
     <MESSAGE value="Fix /home removing life." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix /home removing life." />
+    <MESSAGE value="Fix eating golden apples." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix eating golden apples." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/api/API.java">
@@ -608,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LifeMc-2.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -654,17 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="80" column="48" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
-          <folding>
-            <element signature="e#2231#2232#0" expanded="true" />
-            <element signature="e#2309#2310#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -730,23 +724,6 @@
             <element signature="e#3031#3032#0" expanded="true" />
             <element signature="e#3070#3071#0" expanded="true" />
             <element signature="e#3135#3136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1162#1198#1" />
-            <element signature="e#1691#2251#1" />
-            <element signature="e#2292#2368#1" />
-            <element signature="e#2410#2486#1" />
-            <element signature="e#2531#2610#1" />
-            <element signature="e#2653#2730#1" />
-            <element signature="e#3224#3372#1" />
           </folding>
         </state>
       </provider>
@@ -829,11 +806,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="119">
           <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#534#565#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+          <folding>
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#3215#3216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#1071#1" />
           </folding>
         </state>
       </provider>
