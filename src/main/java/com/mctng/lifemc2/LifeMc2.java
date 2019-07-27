@@ -16,7 +16,7 @@ public class LifeMc2 extends JavaPlugin {
 	private ConfigHandler configHandler = new ConfigHandler(this);
 	private VaultHandler vaultHandler = new VaultHandler(this);
 	private DataHandler dataHandler;
-	
+
 	private API api = new API(this);
 
 	private ConfigWrapper dataConfig = new ConfigWrapper(this, "", "data.yml");
@@ -24,9 +24,9 @@ public class LifeMc2 extends JavaPlugin {
 			"messages.yml");
 
 	public void onDisable() {
-		
+
 		dataConfig.saveConfig();
-		
+
 		getLogger().info(
 				"LifeMc2 v" + getDescription().getVersion()
 						+ " has been disabled!");
@@ -45,9 +45,9 @@ public class LifeMc2 extends JavaPlugin {
 		langConfig
 				.createNewFile("Loaded messages.yml",
 						"You can edit all messages to your liking. \nColour codes are supported.");
-	
+
 		configHandler.loadLangConfig();
-		
+
 		// Load data handler
 		dataHandler = new DataHandler(this);
 
@@ -67,17 +67,15 @@ public class LifeMc2 extends JavaPlugin {
 	private void registerListeners() {
 		getServer().getPluginManager().registerEvents(
 				new InteractListener(this), this);
-		getServer().getPluginManager().registerEvents(
-				new PlayerRespawnListener(this), this);
+		//getServer().getPluginManager().registerEvents(
+		//		new PlayerRespawnListener(this), this);
 		getServer().getPluginManager().registerEvents(new LoginListener(this),
 				this);
 		getServer().getPluginManager().registerEvents(new PlayerQuitListener(this),
 				this);
-		if (this.configHandler.gainLifeAtMurder()) {
-			getServer().getPluginManager().registerEvents(new PlayerDeathListener(this),
-					this);
-		}
-}
+		getServer().getPluginManager().registerEvents(new PlayerDeathListener(this),
+				this);
+	}
 
 	public ConfigHandler getConfigHandler() {
 		return configHandler;

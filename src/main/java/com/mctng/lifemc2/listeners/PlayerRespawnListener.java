@@ -10,6 +10,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
 //Listener class
+
+/*
+This class no longer works properly with EssentialsX
+ */
 public class PlayerRespawnListener implements Listener {
 
 	private LifeMc2 plugin;
@@ -20,6 +24,7 @@ public class PlayerRespawnListener implements Listener {
 
 	@EventHandler
 	public void onPlayerRespawn(PlayerRespawnEvent event) {
+		System.out.println("respawn");
 		final Player player = event.getPlayer();
 
 		if (!player.hasPermission("lifemc.lives.lose"))

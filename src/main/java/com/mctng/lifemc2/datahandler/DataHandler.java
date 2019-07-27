@@ -71,7 +71,7 @@ public class DataHandler {
 
 		dataConfig.set(accountHolder + "." + uuid.toString() + ".lives", lives);
 		dataConfig.set(accountHolder + "." + uuid.toString() + ".name", player.getName());
-		dataConfig.set(accountHolder + "." + uuid.toString() + ".max lives", plugin.getConfigHandler().getMaxLives(player.getName()));
+		dataConfig.set(accountHolder + "." + uuid.toString() + ".max lives", maxLives);
 
 		// Save
 		dataWrapper.saveConfig();

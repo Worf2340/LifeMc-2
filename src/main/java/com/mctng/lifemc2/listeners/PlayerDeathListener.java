@@ -18,9 +18,40 @@ public class PlayerDeathListener implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event){
         System.out.println("dead");
+
+        // Lose life on death
+        final Player player = event.getEntity();
+
+        if (!player.hasPermission("lifemc.lives.lose"))
+            return;
+
+        int lives = plugin.getDataHandler().getLives(player);
+
+        if (lives <= 1) {
+
+            plugin.getDataHandler().setLives(player, 0);
+
+            // Kick player after .5 seconds
+            plugin.getServer().getScheduler()
+                    .runTaskLater(plugin, new Runnable() {
+                        public void run() {
+                            player.kickPlayer(Lang.KICK_OUT_OF_LIVES.getConfigValue());
+                        }
+                    }, 10L);
+        } else {
+
+            plugin.getDataHandler().setLives(player, lives - 1);
+            player.sendMessage(Lang.LOST_A_LIFE.getConfigValue());
+        }
+
+        // Gain life on murder
+        if (!(plugin.getConfigHandler().gainLifeAtMurder())){
+            return;
+        }
+
         Player killer = event.getEntity().getKiller();
         if (killer != null){
-            int lives = plugin.getDataHandler().getLives(killer);
+            lives = plugin.getDataHandler().getLives(killer);
             plugin.getDataHandler().setLives(killer, lives + 1);
             killer.sendMessage(Lang.GAINED_A_LIFE.getConfigValue());
         }

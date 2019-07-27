@@ -77,7 +77,10 @@ public class ConfigHandler {
 		
 		return realMaterials;
 	}
-	
+
+
+	public int getDefaultMaxLives() { return mainConfig.getInt("Max lives", 10); }
+
 	public int getMaxLives(String name) {
 		//UUID uuid = UUID.fromString(uuidString);
 		if (plugin.getServer().getPlayerExact(name) != null){
@@ -109,10 +112,6 @@ public class ConfigHandler {
 			return plugin.getDataHandler().getMaxLives(name);
 		}
 
-	}
-
-	public int getMaxLives() {
-		return mainConfig.getInt("Max lives", 10);
 	}
 	
 	public int getLifeCost() {
