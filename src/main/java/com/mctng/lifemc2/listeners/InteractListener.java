@@ -22,7 +22,6 @@ public class InteractListener implements Listener {
 
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent event) {
-
 		if (!plugin.getConfigHandler().isEatingEnabled()) return;
 		
 		if (!event.hasItem()) return;

@@ -66,7 +66,7 @@ public class LifeMc2 extends JavaPlugin {
 
 	private void registerListeners() {
 		getServer().getPluginManager().registerEvents(
-				new InteractListener(this), this);
+				new PlayerConsumeListener(this), this);
 		//getServer().getPluginManager().registerEvents(
 		//		new PlayerRespawnListener(this), this);
 		getServer().getPluginManager().registerEvents(new LoginListener(this),
