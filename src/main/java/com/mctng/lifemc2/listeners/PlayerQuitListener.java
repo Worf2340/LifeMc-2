@@ -19,7 +19,6 @@ public class PlayerQuitListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerQuit(PlayerQuitEvent event) {
-        System.out.println("hhh");
         Pattern p = Pattern.compile("lifemc.lives.max.([^.]+$)");
         Matcher m;
         int lives = 0;

@@ -24,7 +24,6 @@ public class PlayerConsumeListener implements Listener {
         if (!plugin.getConfigHandler().isEatingEnabled()) return;
 
         Player player = event.getPlayer();
-        System.out.println(event.getItem());
 
         if (!player.hasPermission("lifemc.lives.gain")) return;
 

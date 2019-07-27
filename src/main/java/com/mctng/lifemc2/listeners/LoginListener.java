@@ -23,10 +23,7 @@ public class LoginListener implements Listener {
 	@EventHandler
 	public void onPlayerLogin(PlayerLoginEvent event) {
 		Player player = event.getPlayer();
-		System.out.println(player.getEffectivePermissions());
 		int lives;
-
-		System.out.println(plugin.getConfigHandler().getMaxLives(player.getName()));
 
 
 		if (!plugin.getDataHandler().isStored(player.getName())) {
@@ -39,7 +36,6 @@ public class LoginListener implements Listener {
 				m = p.matcher(permission.getPermission());
 				if (m.matches()){
 					if (m.group(1).matches("\\d+")) {
-						System.out.println(m.group(1));
 						if (Integer.parseInt(m.group(1)) > lives) {
 							lives = Integer.parseInt(m.group(1));
 						}

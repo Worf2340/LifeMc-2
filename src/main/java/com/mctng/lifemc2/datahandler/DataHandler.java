@@ -119,7 +119,6 @@ public class DataHandler {
 
 	public void resetPlayers () {
 		for (String name : dataConfig.getConfigurationSection("accounts").getKeys(false)) {
-			System.out.println(this.getLives(name, true));
 			if (this.getLives(name, true) < 3) {
 				this.setLives(name, 3, true);
 			}

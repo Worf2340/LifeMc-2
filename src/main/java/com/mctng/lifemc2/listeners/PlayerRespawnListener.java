@@ -24,7 +24,6 @@ public class PlayerRespawnListener implements Listener {
 
 	@EventHandler
 	public void onPlayerRespawn(PlayerRespawnEvent event) {
-		System.out.println("respawn");
 		final Player player = event.getPlayer();
 
 		if (!player.hasPermission("lifemc.lives.lose"))
