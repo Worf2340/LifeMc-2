@@ -6,8 +6,6 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import java.util.regex.Pattern;
-
 public class PlayerQuitListener implements Listener {
     LifeMc2 plugin;
 
@@ -17,15 +15,7 @@ public class PlayerQuitListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerQuit(PlayerQuitEvent event) {
-        Pattern p = Pattern.compile("lifemc.lives.max.([^.]+$)");
-        int lives = plugin.getDataHandler().getLivesFromPermission(event.getPlayer(), p);
-
-        if (lives == 0){
-            plugin.getDataHandler().setLives(event.getPlayer(), plugin.getDataHandler().getLives(event.getPlayer()), plugin.getConfigHandler().getDefaultMaxLives());
-        }
-        else {
-            plugin.getDataHandler().setLives(event.getPlayer(), plugin.getDataHandler().getLives(event.getPlayer()), lives);
-        }
+        plugin.getDataHandler().savePlayer(event.getPlayer());
 
     }
 }

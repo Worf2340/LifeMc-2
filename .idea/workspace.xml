@@ -8,14 +8,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e1505d07-4222-425d-9205-63474d302a16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/InteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/InteractListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/commands/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/commands/Commands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/config/ConfigHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/config/ConfigHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/datahandler/DataHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/datahandler/DataHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/InteractListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/InteractListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/LoginListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/LoginListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/PlayerRespawnListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/PlayerRespawnListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/PlayerRespawnListener$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/PlayerRespawnListener$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/PlayerRespawnListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mctng/lifemc2/listeners/PlayerRespawnListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="237">
+              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,16 +54,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="110" column="21" lean-forward="true" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+            <state relative-caret-position="305">
+              <caret line="174" column="12" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="12" />
               <folding>
-                <element signature="e#3158#3159#0" expanded="true" />
-                <element signature="method#getUUIDString#0;class#DataHandler#0" />
-                <element signature="e#3872#3873#0" expanded="true" />
+                <element signature="e#3802#3803#0" expanded="true" />
+                <element signature="e#5415#5416#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.14.1-R0.1-SNAPSHOT/spigot-api-1.14.1-R0.1-20190527.022734-35-sources.jar!/org/bukkit/configuration/MemorySection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="740" selection-start-line="740" selection-end-line="740" />
             </state>
           </provider>
         </entry>
@@ -72,22 +98,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/regex/Matcher.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="560" column="6" lean-forward="true" selection-start-line="560" selection-start-column="6" selection-end-line="560" selection-end-column="6" />
+            <state relative-caret-position="203">
+              <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -95,29 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerDeathListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" selection-end-line="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="629">
+              <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -125,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="137" column="17" lean-forward="true" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="333" column="45" selection-start-line="333" selection-start-column="45" selection-end-line="333" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#623#1071#1" />
@@ -139,13 +144,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/vault/VaultHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -208,7 +210,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/InteractListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerConsumeListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerDeathListener.java" />
@@ -216,10 +217,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java" />
       </list>
     </option>
   </component>
@@ -313,6 +315,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lifemc2" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LifeMc-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LifeMc-2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lifemc2" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LifeMc-2" type="b2602c69:ProjectViewProjectNode" />
@@ -550,11 +561,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564207503796</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refractor/cleanup code">
+      <created>1564328203198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564328203200</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48435000" />
+    <option name="totallyTimeSpent" value="51821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -569,7 +587,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7424893" visible="true" weight="0.20067114" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7424893" visible="true" weight="0.20067114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -579,7 +597,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.604698" visible="true" weight="0.3796034" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.604698" visible="true" weight="0.28611898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -654,7 +672,8 @@
     <MESSAGE value="Fix /home removing life." />
     <MESSAGE value="Fix eating golden apples." />
     <MESSAGE value="Add /llifemx reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add /llifemx reset" />
+    <MESSAGE value="Refractor/cleanup code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refractor/cleanup code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/api/API.java">
@@ -713,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -731,13 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.14.1-R0.1-SNAPSHOT/spigot-api-1.14.1-R0.1-20190527.022734-35-sources.jar!/org/bukkit/configuration/MemorySection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="324" selection-start-line="324" selection-end-line="324" />
         </state>
       </provider>
     </entry>
@@ -790,16 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,51 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="560" column="6" lean-forward="true" selection-start-line="560" selection-start-column="6" selection-end-line="560" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="137" column="17" lean-forward="true" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#623#1071#1" />
-            <element signature="e#1140#1510#1" />
-            <element signature="e#1167#1203#1" />
-            <element signature="e#1237#1283#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,22 +923,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/config/ConfigHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/PlayerQuitListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/LifeMc2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/listeners/LoginListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state relative-caret-position="629">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/commands/Commands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="333" column="45" selection-start-line="333" selection-start-column="45" selection-end-line="333" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#1071#1" />
+            <element signature="e#1140#1510#1" />
+            <element signature="e#1167#1203#1" />
+            <element signature="e#1237#1283#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.14.1-R0.1-SNAPSHOT/spigot-api-1.14.1-R0.1-20190527.022734-35-sources.jar!/org/bukkit/configuration/MemorySection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="740" selection-start-line="740" selection-end-line="740" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mctng/lifemc2/datahandler/DataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="110" column="21" lean-forward="true" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+        <state relative-caret-position="305">
+          <caret line="174" column="12" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="12" />
           <folding>
-            <element signature="e#3158#3159#0" expanded="true" />
-            <element signature="method#getUUIDString#0;class#DataHandler#0" />
-            <element signature="e#3872#3873#0" expanded="true" />
+            <element signature="e#3802#3803#0" expanded="true" />
+            <element signature="e#5415#5416#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -30,7 +30,7 @@ public class LoginListener implements Listener {
 			lives = plugin.getDataHandler().getLivesFromPermission(player, p);
 
 			if (lives == 0){
-				lives = plugin.getConfigHandler().getStartingLives();
+				lives = plugin.getConfigHandler().getDefaultStartingLives();
 			}
 
 			plugin.getDataHandler().setLives(player, lives);
@@ -49,6 +49,8 @@ public class LoginListener implements Listener {
 				event.setResult(result);
 			}
 		}
+
+		plugin.getDataHandler().savePlayer(player);
 	}
 
 }

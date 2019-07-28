@@ -68,12 +68,13 @@ public class DataHandler {
 		dataWrapper.saveConfig();	
 	}
 
-	public void setLives(Player player, int lives, int maxLives) {
+	public void setLives(Player player, int lives, int maxLives, int startingLives) {
 		UUID uuid = player.getUniqueId();
 
 		dataConfig.set(accountHolder + "." + uuid.toString() + ".lives", lives);
 		dataConfig.set(accountHolder + "." + uuid.toString() + ".name", player.getName());
 		dataConfig.set(accountHolder + "." + uuid.toString() + ".max lives", maxLives);
+		dataConfig.set(accountHolder + "." + uuid.toString() + ".starting lives", startingLives);
 
 		// Save
 		dataWrapper.saveConfig();
@@ -90,7 +91,29 @@ public class DataHandler {
 			lives = getLivesFromPermission(player, p);
 
 			if (lives == 0) {
-				return plugin.getConfig().getInt("Max lives", 10);
+				return plugin.getConfigHandler().getDefaultMaxLives();
+			}
+			else {
+				return lives;
+			}
+		}
+		else {
+			return dataConfig.getInt(accountHolder + "." + getUUIDString(name) + ".max lives", 10);
+		}
+
+	}
+
+	public int getStartingLives(String name) {
+		if (plugin.getServer().getPlayerExact(name) != null){
+			Player player = plugin.getServer().getPlayerExact(name);
+
+			Pattern p = Pattern.compile("lifemc.lives.starting.([^.]+$)");
+			int lives = 0;
+
+			lives = getLivesFromPermission(player, p);
+
+			if (lives == 0) {
+				return plugin.getConfigHandler().getDefaultStartingLives();
 			}
 			else {
 				return lives;
@@ -144,6 +167,32 @@ public class DataHandler {
 				this.setLives(getPlayerName(uuid), 3);
 			}
 		}
+	}
+
+	public void resetPlayersStarting () {
+		for (String uuid : dataConfig.getConfigurationSection("accounts").getKeys(false)) {
+			if (this.getLives(getPlayerName(uuid)) < getStartingLives(getPlayerName(uuid))) {
+				this.setLives(getPlayerName(uuid), getStartingLives(getPlayerName(uuid)));
+			}
+		}
+	}
+
+	public void savePlayer(Player player){
+		Pattern max = Pattern.compile("lifemc.lives.max.([^.]+$)");
+		Pattern starting = Pattern.compile("lifemc.lives.starting.([^.]+$)");
+
+		int maxLives = getLivesFromPermission(player, max);
+		int startingLives = getLivesFromPermission(player, starting);
+
+		if (maxLives == 0){
+			maxLives = plugin.getConfigHandler().getDefaultMaxLives();
+		}
+
+		if (startingLives == 0){
+			startingLives = plugin.getConfigHandler().getDefaultMaxLives();
+		}
+
+		plugin.getDataHandler().setLives(player, plugin.getDataHandler().getLives(player), maxLives, startingLives);
 	}
 
 	public boolean isStored(String playerName) {

@@ -81,7 +81,7 @@ public class ConfigHandler {
 		return mainConfig.getInt("Life cost", 100);
 	}
 	
-	public int getStartingLives() {
+	public int getDefaultStartingLives() {
 		return mainConfig.getInt("Starting lives", 3);
 	}
 	

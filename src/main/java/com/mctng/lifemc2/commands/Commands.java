@@ -324,9 +324,28 @@ public class Commands implements CommandExecutor {
 				return true;
 			}
 
-			plugin.getDataHandler().resetPlayers();
-			sender.sendMessage(ChatColor.GOLD + "Reset complete!");
+			if (args.length == 1){
+                plugin.getDataHandler().resetPlayers();
+                sender.sendMessage(ChatColor.GOLD + "Reset complete!");
+                return true;
+            }
+
+			if (args.length == 2){
+			    if (args[1].equalsIgnoreCase("starting")){
+			        plugin.getDataHandler().resetPlayersStarting();
+                    sender.sendMessage(ChatColor.GOLD + "Reset to starting lives complete!");
+                }
+			    else {
+                    sender.sendMessage(Lang.USAGE_ERROR
+                            .getConfigValue("/lifemc reset <starting>"));
+			    }
+			    return true;
+            }
+
+            sender.sendMessage(Lang.USAGE_ERROR
+                    .getConfigValue("/lifemc reset <starting>"));
 			return true;
+
 		}
 
 		sender.sendMessage(Lang.UNKNOWN_COMMAND.getConfigValue());
