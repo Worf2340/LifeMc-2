@@ -98,7 +98,7 @@ public class DataHandler {
 			}
 		}
 		else {
-			return dataConfig.getInt(accountHolder + "." + getUUIDString(name) + ".max lives", 10);
+			return dataConfig.getInt(accountHolder + "." + getUUIDString(name) + ".max lives", plugin.getConfigHandler().getDefaultMaxLives());
 		}
 
 	}
@@ -120,7 +120,7 @@ public class DataHandler {
 			}
 		}
 		else {
-			return dataConfig.getInt(accountHolder + "." + getUUIDString(name) + ".max lives", 10);
+			return dataConfig.getInt(accountHolder + "." + getUUIDString(name) + ".starting lives", plugin.getConfigHandler().getDefaultStartingLives());
 		}
 
 	}
