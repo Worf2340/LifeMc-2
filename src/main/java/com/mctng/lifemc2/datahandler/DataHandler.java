@@ -4,8 +4,11 @@ import com.mctng.lifemc2.LifeMc2;
 import com.mctng.lifemc2.config.ConfigWrapper;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.permissions.PermissionAttachmentInfo;
 
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Class to get information about the lives of a player
@@ -36,16 +39,10 @@ public class DataHandler {
 		return dataConfig.getInt(accountHolder + "." + uuid.toString() + ".lives", 0);
 	}
 	
-	public int getLives(String playerName, boolean isUuid) {
+	public int getLives(String playerName) {
 
-		String uuid;
-		if (!(isUuid)) {
-			uuid = getUUIDString(playerName);
-			if (uuid == null) return 0;
-		}
-		else {
-			uuid = playerName;
-		}
+		String uuid = getUUIDString(playerName);
+		if (uuid == null) return 0;
 		
 		return dataConfig.getInt(accountHolder + "." + uuid + ".lives", 0);
 	}
@@ -61,16 +58,9 @@ public class DataHandler {
 	}
 
 	
-	public void setLives(String playerName, int lives, boolean isUuid) {
-		String uuid;
-		if (!(isUuid)) {
-			uuid = getUUIDString(playerName);
-			if (uuid == null) return;
-		}
-		else {
-			uuid = playerName;
-		}
-
+	public void setLives(String playerName, int lives) {
+		String uuid = getUUIDString(playerName);
+		if (uuid == null) return;
 
 		dataConfig.set(accountHolder + "." + uuid + ".lives", lives);
 
@@ -89,12 +79,43 @@ public class DataHandler {
 		dataWrapper.saveConfig();
 	}
 
-	public int getMaxLives(String playerName) {
-		String uuid = getUUIDString(playerName);
+	public int getMaxLives(String name) {
+		if (plugin.getServer().getPlayerExact(name) != null){
+			Player player = plugin.getServer().getPlayerExact(name);
 
-		if (uuid == null) return 0;
+			Pattern p = Pattern.compile("lifemc.lives.max.([^.]+$)");
+			Matcher m;
+			int lives = 0;
 
-		return dataConfig.getInt(accountHolder + "." + uuid + ".max lives", 10);
+			lives = getLivesFromPermission(player, p);
+
+			if (lives == 0) {
+				return plugin.getConfig().getInt("Max lives", 10);
+			}
+			else {
+				return lives;
+			}
+		}
+		else {
+			return dataConfig.getInt(accountHolder + "." + getUUIDString(name) + ".max lives", 10);
+		}
+
+	}
+
+	public int getLivesFromPermission(Player player, Pattern p){
+		Matcher m;
+		int lives = 0;
+		for (PermissionAttachmentInfo permission : player.getEffectivePermissions()){
+			m = p.matcher(permission.getPermission());
+			if (m.matches()){
+				if (m.group(1).matches("\\d+")) {
+					if (Integer.parseInt(m.group(1)) > lives) {
+						lives = Integer.parseInt(m.group(1));
+					}
+				}
+			}
+		}
+		return lives;
 	}
 
 	public String getPlayerName(String uuid) {
@@ -118,12 +139,13 @@ public class DataHandler {
 	}
 
 	public void resetPlayers () {
-		for (String name : dataConfig.getConfigurationSection("accounts").getKeys(false)) {
-			if (this.getLives(name, true) < 3) {
-				this.setLives(name, 3, true);
+		for (String uuid : dataConfig.getConfigurationSection("accounts").getKeys(false)) {
+			if (this.getLives(getPlayerName(uuid)) < 3) {
+				this.setLives(getPlayerName(uuid), 3);
 			}
 		}
 	}
+
 	public boolean isStored(String playerName) {
 		return getUUIDString(playerName) != null;
 	}

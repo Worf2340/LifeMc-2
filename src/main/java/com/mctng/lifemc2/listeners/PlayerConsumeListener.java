@@ -34,7 +34,7 @@ public class PlayerConsumeListener implements Listener {
 
         int lives = plugin.getDataHandler().getLives(player);
 
-        if (lives >= this.plugin.getConfigHandler().getMaxLives(player.getName())) {
+        if (lives >= this.plugin.getDataHandler().getMaxLives(player.getName())) {
             event.setCancelled(true);
             player.sendMessage(Lang.CANNOT_OBTAIN_MORE_LIVES.getConfigValue());
             return;

@@ -6,9 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
-import org.bukkit.permissions.PermissionAttachmentInfo;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 //Listener class
@@ -29,19 +27,7 @@ public class LoginListener implements Listener {
 		if (!plugin.getDataHandler().isStored(player.getName())) {
 			// Check if player has a starting life permission
 			Pattern p = Pattern.compile("lifemc.lives.starting.([^.]+$)");
-			Matcher m;
-			lives = 0;
-
-			for (PermissionAttachmentInfo permission : player.getEffectivePermissions()){
-				m = p.matcher(permission.getPermission());
-				if (m.matches()){
-					if (m.group(1).matches("\\d+")) {
-						if (Integer.parseInt(m.group(1)) > lives) {
-							lives = Integer.parseInt(m.group(1));
-						}
-					}
-				}
-			}
+			lives = plugin.getDataHandler().getLivesFromPermission(player, p);
 
 			if (lives == 0){
 				lives = plugin.getConfigHandler().getStartingLives();

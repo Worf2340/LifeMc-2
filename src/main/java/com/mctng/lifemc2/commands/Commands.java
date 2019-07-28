@@ -118,7 +118,7 @@ public class Commands implements CommandExecutor {
 			target = plugin.getDataHandler().getPlayerName(
 					plugin.getDataHandler().getUUIDString(target));
 
-			int currentLives = plugin.getDataHandler().getLives(target, false);
+			int currentLives = plugin.getDataHandler().getLives(target);
 
 			if (action.equalsIgnoreCase("add")) {
 				newLives = currentLives + livesArg;
@@ -146,7 +146,7 @@ public class Commands implements CommandExecutor {
 					return true;
 				}
 
-				if (newLives > this.plugin.getConfigHandler().getMaxLives(target)) {
+				if (newLives > this.plugin.getDataHandler().getMaxLives(target)) {
 					sender.sendMessage(Lang.CANNOT_GIVE_THAT_MANY_LIVES
 							.getConfigValue());
 					return true;
@@ -156,7 +156,7 @@ public class Commands implements CommandExecutor {
 				plugin.getDataHandler().setLives(player, ownLives - livesArg);
 			}
 
-			plugin.getDataHandler().setLives(target, newLives, false);
+			plugin.getDataHandler().setLives(target, newLives);
 
 			sender.sendMessage(Lang.CHANGED_LIFE_AMOUNT.getConfigValue(target
 					+ "'s", newLives + ""));
@@ -208,9 +208,9 @@ public class Commands implements CommandExecutor {
 
 			int lives = plugin.getDataHandler().getLives(player);
 
-			if (lives + amount > this.plugin.getConfigHandler().getMaxLives(player.getName())) {
+			if (lives + amount > this.plugin.getDataHandler().getMaxLives(player.getName())) {
 				player.sendMessage(Lang.CANNOT_HAVE_MORE_THAN
-						.getConfigValue(this.plugin.getConfigHandler().getMaxLives(player.getName())
+						.getConfigValue(this.plugin.getDataHandler().getMaxLives(player.getName())
 								+ ""));
 				return true;
 			}
@@ -305,7 +305,7 @@ public class Commands implements CommandExecutor {
 					return true;
 				}
 
-				int lives = plugin.getDataHandler().getLives(realTarget, false);
+				int lives = plugin.getDataHandler().getLives(realTarget);
 
 				sender.sendMessage(Lang.CHECK_LIVES_OTHER.getConfigValue(
 						realTarget, lives + ""));
