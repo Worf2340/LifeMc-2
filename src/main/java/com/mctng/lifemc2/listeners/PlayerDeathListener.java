@@ -7,6 +7,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
+import java.util.Random;
+
 public class PlayerDeathListener implements Listener {
 
     LifeMc2 plugin;
@@ -43,16 +45,19 @@ public class PlayerDeathListener implements Listener {
             player.sendMessage(Lang.LOST_A_LIFE.getConfigValue());
         }
 
-        // Gain life on murder
-        if (!(plugin.getConfigHandler().gainLifeAtMurder())){
-            return;
-        }
 
-        Player killer = event.getEntity().getKiller();
-        if (killer != null){
-            lives = plugin.getDataHandler().getLives(killer);
-            plugin.getDataHandler().setLives(killer, lives + 1);
-            killer.sendMessage(Lang.GAINED_A_LIFE.getConfigValue());
+        // Chance of gaining a life on murder
+        int chance = plugin.getConfigHandler().gainLifeOnMurderChance();
+        Random rand = new Random();
+        boolean gainLife = rand.nextInt(100) < chance;
+
+        if (gainLife) {
+            Player killer = event.getEntity().getKiller();
+            if (killer != null) {
+                lives = plugin.getDataHandler().getLives(killer);
+                plugin.getDataHandler().setLives(killer, lives + 1);
+                killer.sendMessage(Lang.GAINED_A_LIFE.getConfigValue());
+            }
         }
     }
 

@@ -28,5 +28,5 @@ Life cost: 100
 # This feature is deprecated and no longer works.
 Spawn at bad after ban: false
 
-# Does a player gain a life when he kills another player?
-Gain life at murder: false
+# What is the percent chance that a player will gain a life on murdering another player?
+Chance of gain life at murder: 100

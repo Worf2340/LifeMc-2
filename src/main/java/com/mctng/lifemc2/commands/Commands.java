@@ -122,6 +122,11 @@ public class Commands implements CommandExecutor {
 
 			if (action.equalsIgnoreCase("add")) {
 				newLives = currentLives + livesArg;
+				if (newLives > this.plugin.getDataHandler().getMaxLives(target)) {
+					sender.sendMessage(Lang.CANNOT_GIVE_THAT_MANY_LIVES
+							.getConfigValue());
+					return true;
+				}
 			} else if (action.equalsIgnoreCase("set")) {
 				newLives = livesArg;
 			} else if (action.equalsIgnoreCase("remove")) {
@@ -155,6 +160,8 @@ public class Commands implements CommandExecutor {
 				// Remove lives from player
 				plugin.getDataHandler().setLives(player, ownLives - livesArg);
 			}
+
+
 
 			plugin.getDataHandler().setLives(target, newLives);
 

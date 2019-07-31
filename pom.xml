@@ -6,7 +6,7 @@
 
     <groupId>com.mctng.</groupId>
     <artifactId>LifeMc2</artifactId>
-    <version>1.1</version>
+    <version>1.1.1</version>
     <packaging>jar</packaging>
 
     <name>LifeMc2</name>
