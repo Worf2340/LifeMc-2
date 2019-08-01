@@ -49,7 +49,9 @@ public class PlayerDeathListener implements Listener {
         // Chance of gaining a life on murder
         int chance = plugin.getConfigHandler().gainLifeOnMurderChance();
         Random rand = new Random();
-        boolean gainLife = rand.nextInt(100) < chance;
+        int randInt = rand.nextInt(100);
+       // System.out.println(randInt);
+        boolean gainLife = randInt < chance;
 
         if (gainLife) {
             Player killer = event.getEntity().getKiller();
