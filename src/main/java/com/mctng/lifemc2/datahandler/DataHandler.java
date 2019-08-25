@@ -2,6 +2,7 @@ package com.mctng.lifemc2.datahandler;
 
 import com.mctng.lifemc2.LifeMc2;
 import com.mctng.lifemc2.config.ConfigWrapper;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachmentInfo;
@@ -175,6 +176,19 @@ public class DataHandler {
 				this.setLives(getPlayerName(uuid), getStartingLives(getPlayerName(uuid)));
 			}
 		}
+	}
+
+	public int resetPlayerStarting (String playerName) {
+
+		if (!(isStored(playerName)) && (Bukkit.getPlayerExact(playerName) == null)) {
+			return -1;
+		}
+
+		if ((this.getLives(playerName)) < this.getStartingLives(playerName)) {
+			this.setLives(playerName, this.getStartingLives(playerName));
+			return 0;
+		}
+		return 1;
 	}
 
 	public void savePlayer(Player player){

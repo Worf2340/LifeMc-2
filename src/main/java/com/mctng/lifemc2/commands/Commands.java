@@ -349,6 +349,35 @@ public class Commands implements CommandExecutor {
 			    return true;
             }
 
+			if (args.length == 3) {
+				if (args[1].equalsIgnoreCase("starting")){
+					int outcome = plugin.getDataHandler().resetPlayerStarting(args[2]);
+					if (outcome == 0){
+						String uuid = plugin.getDataHandler().getUUIDString(args[2]);
+						String formattedName = plugin.getDataHandler().getPlayerName(uuid);
+						sender.sendMessage(ChatColor.YELLOW + formattedName + "'s" + ChatColor.DARK_GREEN + " lives have been reset to " +
+								ChatColor.YELLOW + plugin.getDataHandler().getStartingLives(args[2]) + ".");
+					}
+					else if (outcome == 1){
+						String uuid = plugin.getDataHandler().getUUIDString(args[2]);
+						String formattedName = plugin.getDataHandler().getPlayerName(uuid);
+
+						sender.sendMessage(ChatColor.YELLOW + formattedName + "'s" +
+								ChatColor.RED + " lives are already greater than or equal to" +
+								" their starting amount " + ChatColor.YELLOW + "(" +
+								plugin.getDataHandler().getStartingLives(args[2]) + ").");
+					}
+					else if (outcome == -1) {
+						sender.sendMessage(Lang.PLAYER_NOT_FOUND_IN_DATABASE
+								.getConfigValue(args[2]));					}
+				}
+				else {
+					sender.sendMessage(Lang.USAGE_ERROR
+							.getConfigValue("/lifemc reset <starting> <player>"));
+				}
+				return true;
+			}
+
             sender.sendMessage(Lang.USAGE_ERROR
                     .getConfigValue("/lifemc reset <starting>"));
 			return true;
