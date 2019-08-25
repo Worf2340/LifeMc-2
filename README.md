@@ -1,5 +1,5 @@
 # LifeMc-2
-#### Latest version: v1.1
+#### Latest version: v1.3
 ### Original LifeMc PLugin: https://dev.bukkit.org/projects/lifemc
 
 ## This plugin fixes some bugs from the original LifeMc plugin and adds a few new features. 
